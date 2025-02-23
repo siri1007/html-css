@@ -42,3 +42,35 @@ function prevSlide() {
 }
 
 setInterval(nextSlide, 3000); // Auto-slide every 3 seconds
+
+
+
+// Increase numbers
+
+
+function animateNumbers() {
+    const counters = document.querySelectorAll(".number");
+
+    counters.forEach(counter => {
+        let target = parseInt(counter.getAttribute("data-number"));
+        let count = 0;
+        let speed = target / 150; 
+
+        function updateCount() {
+            count += Math.ceil(speed);
+            if (count >= target) {
+                count = target;
+                clearInterval(interval);
+            }
+            counter.textContent = count;
+        }
+
+        let interval = setInterval(updateCount, 50); 
+    });
+}
+
+// Initialize animation when the page loads
+window.onload = function() {
+    AOS.init();
+    animateNumbers();
+};
