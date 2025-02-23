@@ -159,7 +159,8 @@ margin: auto;
 .image-container{
   max-height: 400px;
 }
-    .p-1 .b{
+
+.p-1 .b{
       
      
   bottom: -35px;
@@ -168,6 +169,7 @@ margin: auto;
 
   
  }
+ 
   }
 
   @media (max-width: 400px){
@@ -177,7 +179,7 @@ margin: auto;
      
      bottom: -35px;
     color: white;
-      left: 65px;
+     left: 65px;
     background-color:  #2f89fc;
      
     }
